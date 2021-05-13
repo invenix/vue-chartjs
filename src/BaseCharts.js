@@ -1,4 +1,6 @@
-import Chart from 'chart.js'
+import { Chart, registerables } from 'chart.js';
+//import 'chartjs-adapter-moment'; // or another adapter to avoid moment
+Chart.register(...registerables);
 
 export function generateChart (chartId, chartType) {
   return {
